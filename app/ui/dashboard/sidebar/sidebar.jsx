@@ -7,6 +7,7 @@ import {
 import styles from './sidebar.module.css';
 import MenuLink from './menu-link/menuLink';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const menus = [
     {
@@ -52,9 +53,11 @@ const SideBar = () => {
                     </li>
                 ))}
             </ul>
-            <button className={styles.logout}>
-                <MdLogout />Logout
-            </button>
+            <Link href="/login">
+                <button className={styles.logout}>
+                    <MdLogout />Logout
+                </button>
+            </Link>
         </div>
     );
 };
